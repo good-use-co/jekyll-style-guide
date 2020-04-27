@@ -1,4 +1,4 @@
----
+<!-- ---
 title: Getting Started
 info: How to setup and configure this Jekyll-based style guide boilerplate.
 nav: true
@@ -6,13 +6,13 @@ nav: true
 
 # Installation
 
-To start you’ll need to download and install [Jekyll](http://jekyllrb.com/) (3.1 or higher) and the source code from [Github](https://github.com/matthewelsom/jekyll-style-guide). 
+To start you’ll need to download and install [Jekyll](http://jekyllrb.com/) (3.1 or higher) and the source code from [Github](https://github.com/matthewelsom/jekyll-style-guide).
 
 
 ><i class="icon red" data-icon="info"></i>Sample UI patterns and documentation have been included in this tool to indicate what a finished Style Guide could look like. You can remove the files from `src/` and the `CNAME` file to start from scratch.
 
 
-To serve the files locally run the following code in terminal: 
+To serve the files locally run the following code in terminal:
 
 {% highlight terminal %}
 $ cd /path/to/local/folder/
@@ -35,11 +35,11 @@ jekyll-style-guide/
 
 All settings are contained in the `_config.yml` file. To use this tool out of the box, you only need to adjust the `pattern settings`.
 
---- 
+---
 
 ## General Settings
 
-These are standard Jekyll configuration settings, check the [documentation](https://jekyllrb.com/docs/configuration/) for information on how to use this. 
+These are standard Jekyll configuration settings, check the [documentation](https://jekyllrb.com/docs/configuration/) for information on how to use this.
 
 ---
 
@@ -57,7 +57,7 @@ These settings control how documentation and pattern files are generated, and wh
 
 ## Pattern Settings
 
-These settings are used in all patterns and should be updated based on your needs. 
+These settings are used in all patterns and should be updated based on your needs.
 
 {% highlight yml %}
 
@@ -70,7 +70,7 @@ pattern_favicon: /src/assets/images/icon.ico
 
 pattern_styles:                         ## (list) add style locations here
   - /src/assets/css/style.css
-  
+
 pattern_scripts:                        ## (list) add script locations here
   - /styleguide/js/libs/jquery-2.1.4.min.js  
 
@@ -92,22 +92,22 @@ A 'Pattern' is any part of the user interface, by default there are 3 types:
 
 - **Foundations**
   - Foundations are global constraints that define the basic parameters of parts of the UI.
-  - Example, a Typeface, Primary or Secondary Colors, Icons. 
+  - Example, a Typeface, Primary or Secondary Colors, Icons.
 
 - **Components**
   - Components are stand-alone UI patterns that can be directly used in the interface.
   - They can include Foundations, or can be constructed with uniques styles.
   - Example, Primary Button, Secondary Button, Card, Card Group, Table, etc.
-  
+
 - **Templates**
   - Templates are pre-determined page layouts.
-  - They can include components and foundations, or can be constructed uniquely. 
-  - Examples, Full-Width Content Page, Sidebar Page, Two Column Page 
-  
-  
+  - They can include components and foundations, or can be constructed uniquely.
+  - Examples, Full-Width Content Page, Sidebar Page, Two Column Page
+
+
 {% highlight directory %}
 │   
-└── src/ 
+└── src/
     ├── assets/
     │   ├── _scss
     │   ├── css
@@ -153,7 +153,7 @@ control: exclude
 /src/patterns/components/cards/disabled-card.md
 {% endhighlight %}
 
---- 
+---
 
 ## Editing Pattern Assets
 
@@ -165,7 +165,7 @@ control: exclude
 
 # Adding Documentation
 
-## What is Documentation? 
+## What is Documentation?
 
 'Documentation' is used to store information relating to a pattern (or group of patterns), as well as information about the style guide itself - this page is an example of a document.
 
@@ -205,36 +205,36 @@ These settings are defined in the `config.yml` file and ensure that each documen
 
 ## Outputs the _docs collection !Required
 collections:
-  docs: 
+  docs:
     output: true
 
 ## Sets the default attributes for the Documentation and Pattern Files !Required
 defaults:
-  - 
+  -
     scope:
       path: "_docs"
     values:
       layout: doc
       type: doc
-  - 
+  -
     scope:
       path: "_docs/about"
     values:
       layout: doc
       type: about    
-  - 
+  -
     scope:
       path: "_docs/foundations"
     values:
       layout: doc
       type: foundation
-  - 
+  -
     scope:
       path: "_docs/components"
     values:
       layout: doc
-      type: component 
-  - 
+      type: component
+  -
     scope:
       path: "_docs/templates"
     values:
@@ -268,7 +268,7 @@ defaults:
 - Set the title.
 - Optional: add info which will be displayed at the top of the document page.
 - Optional: add `nav: true` into the Front Matter if you would like to display a mini contents menu at the top of the page (like this page).
-- You can use any Markdown in the page content area. 
+- You can use any Markdown in the page content area.
 - To include a pattern in the document page you must include the pattern block and specify a `url` variable in the include. By repeating this process you can include multiple patterns on the page. See the sample below taken from the `button.md` file.
 - Note that the [pattern controls](#uploading-patterns) and maturity are set in the pattern file.
 
@@ -311,7 +311,7 @@ Coming Soon
 <!--
 ## Includes
 
-- Includes are snippets of code used to help generate the style guide pages. 
+- Includes are snippets of code used to help generate the style guide pages.
 - They are stored in the `_includes/` folder.
 - You do not need to change these files unless you are changing the function of the style guide shell
 
@@ -328,8 +328,8 @@ Coming Soon
 
 ## _layouts/
 
-- All patterns are generated using the `pattern.html` file. 
-- Update this file if you wish to add additional scripts to your patterns, e.g. If your pattern requires jQuery to run you should add it here. 
+- All patterns are generated using the `pattern.html` file.
+- Update this file if you wish to add additional scripts to your patterns, e.g. If your pattern requires jQuery to run you should add it here.
 - This file contains the `iframeResizer.contentWindow.min.js` script, it is required to make the pattern load correctly in the iFrame. Removing this script will break the style guide.
 
 {% highlight directory %}
@@ -343,7 +343,7 @@ Coming Soon
 
 ## styleguide/
 
-- Contains all of the stylesheets and scripts required to make the style guide work corretcly. 
+- Contains all of the stylesheets and scripts required to make the style guide work corretcly.
 - Updating these files will change the appearance and function of the style guide shell.
 
 {% highlight directory %}
@@ -358,4 +358,4 @@ Coming Soon
 
 
 ---
--->
+--> -->
